@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="grid.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <script type="text/javascript">
+        $(window).on('load', function() {
+            $('.preloader').addClass('complete')
+        })
+    </script>
+    <script src="fn.js"></script>
+
+
+</head>
+
+<body>
+    <!--Preloader-->
+    <div class="preloader">
+        <div class="loader">
+        </div>
+    </div>
+    <!--Preloader-->
+    <a id="nav-toggle" onclick="if(flag%2!=0){setTimeout(fun3, 750);}else{fun3();}">
+        <span></span>
+        <span></span>
+        <span></span>
+    </a>
+
+    <div id="nav-container">
+        <div id="nav-overlay"></div>
+        <div class="navigation" id="nav-fullscreen">
+            <ul>
+                <li><a href="index.html" data-text="Home">Home</a></li>
+                <li><a href="#" data-text="About">About</a></li>
+                <li><a href="#" data-text="Services">Services</a></li>
+                <li><a href="#" data-text="Work">Work</a></li>
+                <li><a href="#" data-text="Team">Team</a></li>
+                <li><a href="#" data-text="Contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="grid-container1 gc">
+        <div class="item1">
+            <ul class="nav_bar">
+                <li class="active"><a href="index.html">home</a></li>
+                <li><a href="#prof">professional</a></li>
+                <li><a href="#">portfolio</a></li>
+                <li><a href="#exp">experience</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+
+        </div>
+        <div class="item2"></div>
+        <div class="item3">
+            <div class="intro">
+                aman shrivastava
+            </div>
+            <div class="t_rotator">
+                <h2>I'm <span class="type"></span></h2>
+                <div class="desc">
+                    I used to play games only till I entered in college and came to know that we can create games too. Even though I learned my first programming language C, I was so much into games that I created few games in C itself. But, the UI was not looking good in any of the game. So i learned graphic designing and unknowingly got shifted towards UI/UX designing. As I am a curious learner, I am still exploring more fields such as Machine Learning, Aritificial Intelligence,Virtual reality, Augmented reality, VFX and Cybersecurity.
+                </div>
+            </div>
+
+            <div class="hire" onmouseover="fun1()" onmouseout="fun2()">
+                <a href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Let's work together
+                </a>
+            </div>
+
+        </div>
+        <div class="item4">
+            <img src="data/aman5.png" class="me fade-scroll">
+        </div>
+    </div>
+    <div class="grid-container2 gc">
+        <div class="item5 heading" id="prof">
+            <div>knowledge level in skills</div>
+            <div>professional</div>
+        </div>
+        <div class="item6">
+
+        </div>
+        <div class="item7">
+            <div class="skills">
+                <span class="name">Html</span>
+                <div class="percent">
+                    <div class="progress" style="width: 95%"></div>
+                </div>
+                <span class="value">95%</span>
+            </div>
+
+            <div class="skills">
+                <span class="name">CSS</span>
+                <div class="percent">
+                    <div class="progress" style="width: 97%"></div>
+                </div>
+                <span class="value">97%</span>
+            </div>
+
+            <div class="skills">
+                <span class="name">CPP</span>
+                <div class="percent">
+                    <div class="progress" style="width: 80%"></div>
+                </div>
+                <span class="value">80%</span>
+            </div>
+
+            <div class="skills">
+                <span class="name">Python</span>
+                <div class="percent">
+                    <div class="progress" style="width: 90%"></div>
+                </div>
+                <span class="value">90%</span>
+            </div>
+
+            <div class="skills">
+                <span class="name">Photoshop</span>
+                <div class="percent">
+                    <div class="progress" style="width: 80%"></div>
+                </div>
+                <span class="value">80%</span>
+            </div>
+
+            <div class="skills">
+                <span class="name">Illustrator</span>
+                <div class="percent">
+                    <div class="progress" style="width: 98%"></div>
+                </div>
+                <span class="value">98%</span>
+            </div>
+
+
+            <div class="skills">
+                <span class="name">Javascript</span>
+                <div class="percent">
+                    <div class="progress" style="width: 30%"></div>
+                </div>
+                <span class="value">30%</span>
+            </div>
+        </div>
+        <div class="item8">
+
+        </div>
+    </div>
+
+    <div class="grid-container3 gc">
+        <div class="item9 heading" id="exp" style="position: sticky; top: 0;">
+            <div>my work</div>
+            <div>portfolio</div>
+        </div>
+        <div class="item10">
+
+        </div>
+        <div class="item11">
+
+        </div>
+        <div class="item12">
+
+        </div>
+    </div>
+    <div class="gc">
+
+    </div>
+
+    <!--SCRIPTS        SCRIPTS        SCRIPTS      SCRIPTS-->
+
+    <script src="typed.js"></script>
+
+    <script>
+        var typed = new Typed(".type", {
+            strings: [
+                "Designer",
+                "Motivator",
+                "Freelancer",
+                "Coder",
+
+            ],
+            typeSpeed: 80,
+            backSpeed: 30,
+            loop: true
+        });
+    </script>
+
+    <!--For changing active class of nav_bar-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <script type="text/javascript">
+        $(document).on('click', 'ul li', function() {
+            $(this).addClass('active').siblings().removeClass('active')
+        })
+    </script>
+
+    <!--for fading image-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(function() {
+
+            var documentEl = $(document),
+                fadeElem = $('.fade-scroll');
+
+
+            documentEl.on('scroll', function() {
+                var currScrollPos = documentEl.scrollTop();
+
+                fadeElem.each(function() {
+                    var $this = $(this),
+                        elemOffsetTop = 0;
+                    if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos - elemOffsetTop) / 500);
+                });
+            });
+
+        });
+    </script>
+
+    <!--creating soothing effect-->
+    <script type="text/javascript">
+        var flag = 50; //global variable  
+        function fun1() {
+            var x = document.getElementsByClassName("me");
+            x[0].src = "data/aman6.png";
+            var y = document.getElementsByClassName("item1");
+            y[0].style.opacity = 0.2;
+            var y = document.getElementsByClassName("t_rotator");
+            y[0].style.opacity = 0.1;
+            var y = document.getElementsByClassName("intro");
+            y[0].innerHTML = "You are taking right step...";
+            y[0].style.transform = "scale(1.5) translateX(13%)";
+            y[0].style.color = "#0f0";
+            y[0].style.fontWeight = "700";
+        }
+
+        function fun2() {
+            var x = document.getElementsByClassName("me");
+            x[0].src = "data/aman5.png";
+            var y = document.getElementsByClassName("item1");
+            y[0].style.opacity = 1;
+            var y = document.getElementsByClassName("t_rotator");
+            y[0].style.opacity = 1;
+            var y = document.getElementsByClassName("intro");
+            y[0].style.transform = "scale(1)";
+            var y = document.getElementsByClassName("intro");
+            y[0].innerHTML = "aman shrivastava";
+            y[0].style.transform = "scale(1) translateX(0%)";
+            y[0].style.color = "#777";
+            y[0].style.fontWeight = "400";
+        }
+
+        function fun3() {
+            var y = document.getElementById("nav-container");
+            if (flag % 2 == 0) {
+                y.style.zIndex = ("2");
+                y.style.height = ("100vh");
+                y.style.width = ("100%");
+                y.style.position = ("fixed");
+                flag++;
+            } else {
+                y.style.zIndex = ("0");
+                y.style.height = ("0vh");
+                y.style.width = ("0%");
+                y.style.position = ("absolute");
+                flag++;
+            }
+
+        }
+    </script>
+
+    <!--for fluid scrolling-->
+
+
+
+
+</body>
+
+</html>
