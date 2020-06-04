@@ -452,7 +452,7 @@ body {
 }
 
 .grid-container5 {
-    grid-column-gap: 0%;
+    grid-column-gap: 1%;
     grid-template-rows: 18% 80%;
     grid-template-columns: auto auto auto;
     grid-template-areas:
@@ -462,8 +462,41 @@ body {
     padding: 0 10%;
 }
 
-.gc > div {
-/*    background-color: rgba(255, 255, 255, 0.03);*/
+.item21 {
+    grid-area: i21;
+    background: #0f0;
+    box-shadow: 0 0 3px #0f0,
+        0 0 5px #0f0,
+        0 0 10px #0f0,
+        0 0 20px #0f0,
+        0 0 30px #0f0,
+        0 0 40px #0f0,
+        0 0 50px #0f0,
+        0 0 100px #0f0;
+}
+
+.item22 {
+    grid-area: i22;
+}
+
+.grid-container6 {
+    overflow: hidden;
+    box-sizing: border-box;
+    display: grid;
+    grid-gap: 5% 0.5%;
+    height: 8%;
+    grid-template-rows: 1% 92%;
+    grid-template-columns: auto 95% auto;
+    grid-template-areas:
+        '. i21 .'
+        'i22 i22 i22';
+    background-color: #151515;
+    padding: 0 4%;
+    
+}
+
+.gc > div, .grid-container6 > div {
+/*        background-color: rgba(255, 255, 255, 0.03);*/
 }
 
 /*nav bar*/
@@ -928,12 +961,13 @@ body {
 .grid-container4 {
     overflow: hidden;
 }
+
 .item15 {
     display: flex;
     justify-content: center;
     align-items: center;
-/*    background: radial-gradient(ellipse at bottom, #1b2735, #090a0f);*/
-/*    font-weight: 300;*/
+    /*    background: radial-gradient(ellipse at bottom, #1b2735, #090a0f);*/
+    /*    font-weight: 300;*/
 }
 
 .all {
@@ -949,7 +983,7 @@ body {
 
 .all:hover {
     perspective: 1000px;
-/*    transition: all 1.3s ease-in;*/
+    /*    transition: all 1.3s ease-in;*/
     transform: perspective(10000px) rotateX(0deg);
 }
 
@@ -974,8 +1008,8 @@ body {
     width: 200px;
     height: 150px;
     transform-style: preserve-3d;
-/*    border: 1px solid #fff;*/
-/*    box-shadow: 0 0 20px 5px rgba(100, 100, 255, 0.4);*/
+    /*    border: 1px solid #fff;*/
+    /*    box-shadow: 0 0 20px 5px rgba(100, 100, 255, 0.4);*/
     opacity: 0;
     transition: all .3s ease;
     transition-delay: 1s;
@@ -997,7 +1031,7 @@ body {
         0 0 25px #0f0,
         0 0 50px #0f0,
         0 0 100px #0f0;
-/*    box-shadow: 0 0 30px 10px rgba(100, 100, 255, 0.6);*/
+    /*    box-shadow: 0 0 30px 10px rgba(100, 100, 255, 0.6);*/
     background-color: #111;
     background-blend-mode: exclusion;
 }
@@ -1015,7 +1049,7 @@ body {
     padding-right: 20px;
     text-align: center;
     width: 100%;
-    
+
 }
 
 .left:hover .text,
@@ -1064,3 +1098,239 @@ body {
 
 
 /*Fifth page*/
+
+.box {
+    position: relative;
+    padding: 40px;
+    padding-top: 110px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    border-radius: 10px;
+    height: 600px;
+}
+
+.box .inputBox {
+    position: relative;
+
+}
+
+.box .inputBox input {
+
+    width: 100%;
+    padding: 15px 0;
+    font-size: 16px;
+    color: #aaa;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    border: none;
+    border-bottom: 1px solid #aaa;
+    outline: none;
+    background: transparent;
+    transition: 1s;
+
+}
+
+.box .inputBox label {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    padding: 10px 0;
+    letter-spacing: 1px;
+    font-size: 16px;
+    color: #aaa;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.box .inputBox input:focus,
+.box .inputBox input:hover {
+    border-bottom: 1px solid #0f0;
+}
+
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label {
+    top: -22px;
+    left: 0px;
+    color: #0f0;
+    font-size: 12px;
+}
+
+textarea {
+    padding-top: 30px;
+    top: -5px;
+    box-sizing: border-box;
+    background-color: transparent;
+    font-size: 16px;
+    resize: none;
+    letter-spacing: 1px;
+    /*    box-shadow: 0 0 7px #aaa inset;*/
+    outline: none;
+    margin-top: 10px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #0f0;
+    transition: .5s;
+    color: #aaa;
+}
+
+textarea::-webkit-input-placeholder {
+    color: #aaa;
+}
+
+textarea:placeholder-shown {
+    border-bottom: 1px solid #fff;
+}
+
+textarea:hover, textarea:focus-within {
+    border-bottom: 1px solid #0f0;
+}
+
+#autoresizing {
+    display: block;
+    overflow: hidden;
+    resize: none;
+}
+
+.box input[type="submit"] {
+    margin-top: 60px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #aaa;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.5s;
+    width: 100%;
+    box-shadow:  -1px -1px 8px rgba(255, 255, 255, 0.1),
+         3px 4px 16px rgba(0, 0, 0, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.box input[type="submit"]:hover {
+    color: #fff;
+    box-shadow:  -1px -1px 2px rgba(255, 255, 255, 0.1),
+         2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.box input[type="submit"]:active {
+    color: #0f0;
+    box-shadow: inset -1px -1px 5px rgba(255, 255, 255, 0.1),
+         inset 2px 2px 16px rgba(0, 0, 0, 0.6);
+}
+
+
+/*ssfsdfsjdhfjsdhfksjd*/
+
+
+.select-container,
+.select-container2 {
+    /*    width: 50px;*/
+}
+
+
+.select-box,
+.select-box2 {
+    display: flex;
+    width: 48%;
+    flex-direction: column;
+    float: left;
+}
+
+.select-box2 {
+    float: right;
+}
+
+.select-box .options-container,
+.select-box2 .options-container2 {
+    background: #222;
+    color: #587B7F;
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.4s;
+    overflow: hidden;
+    order: 1;
+    position: absolute;
+    width: 41.5%;
+    z-index: 10;
+    top: 346px;
+    box-shadow:  -1px 2px 3px rgba(255, 255, 255, 0.2),
+         2px 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+.selected,
+.selected2 {
+    margin-bottom: 8px;
+    color: #aaa;
+    position: relative;
+    order: 0;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+.selected:hover,
+.selected2:hover {
+    background: #222;
+    color: #0f0;
+    padding: 12px 24px;
+    box-shadow:  -1px -1px 2px rgba(255, 255, 255, 0.1),
+         2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.options-container.active:hover ~ .selected,
+.options-container2.active2:hover ~ .selected2 {
+    background: #222;
+    color: #0f0;
+    padding: 12px 24px;
+    box-shadow:  -1px -1px 2px rgba(255, 255, 255, 0.1),
+         2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.select-box .options-container.active,
+.select-box2 .options-container2.active2 {
+    max-height: 250px;
+    opacity: 1;
+    color: #ccc;
+}
+
+.select-box .option,
+.select-box2 .option2 {
+    padding: 12px 24px;
+    cursor: pointer;
+}
+
+.selected,
+.selected2 {
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow:  -1px -1px 8px rgba(255, 255, 255, 0.1),
+         3px 4px 16px rgba(0, 0, 0, 0.8);
+    padding: 12px 20px;
+}
+
+.select-box .option:hover,
+.select-box2 .option2:hover {
+    background: #333;
+    color: #fff;
+}
+
+.select-box label,
+.select-box2 label2 {
+    cursor: pointer;
+}
+
+.select-box .option .radio,
+.select-box2 .option2 .radio {
+    display: none;
+}
+
+/* LAST PAGE*/
+
+.item22 {
+    color: white;
+    align-self: center;
+    text-align: end;
+    letter-spacing: 1px;
+    font-weight: 100;
+}

@@ -221,17 +221,109 @@
         <div class="item18">
 
         </div>
-        <div class="item19">
+        <div class="item19 box">
+            <form>
+                <div class="inputBox">
+                    <input type="text" name="" required="">
+                    <label>Name</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="" required="">
+                    <label>Email</label>
+                </div>
+                <div class="select-container">
+                    <div class="select-box">
+                        <div class="options-container">
+                            <div class="option">
+                                <input type="radio" class="radio" id="automobiles" name="category" />
+                                <label for="automobiles">Graphic Designer</label>
+                            </div>
 
+                            <div class="option">
+                                <input type="radio" class="radio" id="film" name="category" />
+                                <label for="film">UI / UX Designer</label>
+                            </div>
+
+                            <div class="option">
+                                <input type="radio" class="radio" id="science" name="category" />
+                                <label for="science">Frontend Developer</label>
+                            </div>
+
+                            <div class="option">
+                                <input type="radio" class="radio" id="art" name="category" />
+                                <label for="art">Coder</label>
+                            </div>
+
+                            <div class="option">
+                                <input type="radio" class="radio" id="music" name="category" />
+                                <label for="music">Bug Finder</label>
+                            </div>
+                        </div>
+
+                        <div class="selected">
+                            Service
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="select-container2">
+                    <div class="select-box2">
+                        <div class="options-container2">
+                            <div class="option2">
+                                <input type="radio" class="radio" id="automobiles" name="category" />
+                                <label2 for="automobiles">Rs 1000 - Rs 2000</label2>
+                            </div>
+
+                            <div class="option2">
+                                <input type="radio" class="radio" id="film" name="category" />
+                                <label2 for="film">Rs 2000 - Rs 3000</label2>
+                            </div>
+
+                            <div class="option2">
+                                <input type="radio" class="radio" id="science" name="category" />
+                                <label2 for="science">Rs 3000 - Rs 4000</label2>
+                            </div>
+
+                            <div class="option2">
+                                <input type="radio" class="radio" id="art" name="category" />
+                                <label2 for="art">Rs 4000 - Rs 5000</label2>
+                            </div>
+
+                            <div class="option2">
+                                <input type="radio" class="radio" id="music" name="category" />
+                                <label2 for="music">More than Rs 5000</label2>
+                            </div>
+                        </div>
+
+                        <div class="selected2">
+                            Budget
+                        </div>
+                    </div>
+
+                </div>
+
+                <textarea placeholder="Your Message" id="autoresizing"></textarea>
+                <input type="submit" name="" value="submit">
+            </form>
         </div>
         <div class="item20">
 
         </div>
     </div>
+    
+    <div class="grid-container6">
+        <div class="item21">
+            
+        </div>
+        <div class="item22">
+            &copy; Copyright 2020 Aman Shrivastava.
+        </div>
+    </div>
 
-   <img src="data/aman6.png" style="width: 100px; display: none;">
+    <img src="data/aman6.png" style="width: 100px; display: none;">
     <!--SCRIPTS        SCRIPTS        SCRIPTS      SCRIPTS-->
-
+    <script src="grid.js"></script>
     <script src="typed.js"></script>
 
     <script>
@@ -331,6 +423,16 @@
 
     <!--To fixx green image let's load it-->
     <!--for fluid scrolling-->
+
+    <script type="text/javascript">
+        textarea = document.querySelector("#autoresizing");
+        textarea.addEventListener('input', autoResize, false);
+
+        function autoResize() {
+            this.style.height = 'auto';
+            this.style.height = this.scrollHeight + 'px';
+        }
+    </script>
 
 
 
