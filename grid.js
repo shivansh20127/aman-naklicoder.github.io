@@ -57,5 +57,3 @@ ol.forEach(o => {
     oc.classList.remove("active2");
   });
 });
-
-$('textarea').autoResize();

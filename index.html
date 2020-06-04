@@ -18,7 +18,17 @@
 <body>
     <!--Preloader-->
     <div class="preloader">
-        <div class="loader">
+        <div class="reveal">
+            <span>L</span>
+            <span>O</span>
+            <span>A</span>
+            <span>D</span>
+            <span>I</span>
+            <span>N</span>
+            <span>G</span>
+            <span>.</span>
+            <span>.</span>
+            <span>.</span>
         </div>
     </div>
     <!--Preloader-->
@@ -32,7 +42,7 @@
         <div id="nav-overlay"></div>
         <div class="navigation" id="nav-fullscreen">
             <ul>
-                <li><a href="index.html" data-text="Home">Home</a></li>
+                <li><a href="#" data-text="Home">Home</a></li>
                 <li><a href="#" data-text="Experience">Experience</a></li>
                 <li><a href="#" data-text="Theme">Theme</a></li>
                 <li><a href="#" data-text="Projects">Projects</a></li>
@@ -421,8 +431,6 @@
         }
     </script>
 
-    <!--To fixx green image let's load it-->
-    <!--for fluid scrolling-->
 
     <script type="text/javascript">
         textarea = document.querySelector("#autoresizing");
@@ -431,6 +439,8 @@
         function autoResize() {
             this.style.height = 'auto';
             this.style.height = this.scrollHeight + 'px';
+            var y = document.getElementsByClassName("grid-container6");
+            y[0].style.marginTop = this.scrollHeight + 'px';
         }
     </script>
 
