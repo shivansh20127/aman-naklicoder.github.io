@@ -11,8 +11,7 @@
         })
     </script>
     <script src="fn.js"></script>
-
-
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 
 <body>
@@ -44,12 +43,24 @@
             <ul>
                 <li><a href="#" data-text="Home">Home</a></li>
                 <li><a href="#" data-text="Experience">Experience</a></li>
-                <li><a href="#" data-text="Theme">Theme</a></li>
                 <li><a href="#" data-text="Projects">Projects</a></li>
                 <li><a href="#" data-text="About">About</a></li>
-                <li><a href="#" data-text="Icon">The Icon</a></li>
                 <li><a href="contact.html" data-text="Connect">Connect With Me</a></li>
             </ul>
+        </div>
+    </div>
+
+    <div class="logo">
+        <img src="data/l1.png" class="lo">
+    </div>
+
+    <div class="adminActions">
+        <input type="checkbox" name="adminToggle" class="adminToggle" />
+        <a class="adminButton" href="#!"><i class="fa fa-times" aria-hidden="true"></i></a>
+        <div class="adminButtons">
+            <a href="#!" title="Green" class="htm" style="--theme-primary:#0f0;" onclick="cf = 0;"></a>
+            <a href="#!" title="Yellow" class="htm" style="--theme-primary:#fffd04;" onclick="cf = 1;"></a>
+            <a href="#!" title="White" class="htm" style="--theme-primary:#FAFDF6;" onclick="cf = 2;"></a>
         </div>
     </div>
 
@@ -321,10 +332,10 @@
 
         </div>
     </div>
-    
+
     <div class="grid-container6">
         <div class="item21">
-            
+
         </div>
         <div class="item22">
             &copy; Copyright 2020 Aman Shrivastava.
@@ -332,6 +343,7 @@
     </div>
 
     <img src="data/aman6.png" style="width: 100px; display: none;">
+    <img src="data/aman7.png" style="width: 100px; display: none;">
     <!--SCRIPTS        SCRIPTS        SCRIPTS      SCRIPTS-->
     <script src="grid.js"></script>
     <script src="typed.js"></script>
@@ -386,21 +398,40 @@
     <!--creating soothing effect-->
     <script type="text/javascript">
         var flag = 50; //global variable  
+        var cf = 0;
+
         function fun1() {
             var x = document.getElementsByClassName("me");
-            x[0].src = "data/aman6.png";
+            if (cf == 0) {
+                x[0].src = "data/aman6.png";
+            }
+            else if(cf == 1) {
+                x[0].src = "data/aman7.png";
+            }
+            else {
+                x[0].src = "data/aman5.png";
+            }
+
+            var y = document.getElementsByClassName("lo");
+            y[0].style.opacity = 0.1;
             var y = document.getElementsByClassName("t_rotator");
             y[0].style.opacity = 0.1;
             var y = document.getElementsByClassName("intro");
             y[0].innerHTML = "You are taking right step...";
             y[0].style.transform = "scale(1.5) translateX(13%)";
-            y[0].style.color = "#0f0";
+
+            const element = document.querySelector('.explainer')
+            const style = getComputedStyle(element)
+
+            y[0].style.color = style.backgroundColor;
             y[0].style.fontWeight = "700";
         }
 
         function fun2() {
             var x = document.getElementsByClassName("me");
             x[0].src = "data/aman5.png";
+            var y = document.getElementsByClassName("lo");
+            y[0].style.opacity = 1;
             var y = document.getElementsByClassName("t_rotator");
             y[0].style.opacity = 1;
             var y = document.getElementsByClassName("intro");
@@ -431,7 +462,7 @@
         }
     </script>
 
-
+    <!--for last form autoresizing of texbox-->
     <script type="text/javascript">
         textarea = document.querySelector("#autoresizing");
         textarea.addEventListener('input', autoResize, false);
@@ -442,6 +473,17 @@
             var y = document.getElementsByClassName("grid-container6");
             y[0].style.marginTop = this.scrollHeight + 'px';
         }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <script type="text/javascript">
+        $(".htm").on("click", function() {
+            var primaryColor = $(this).css("--theme-primary");
+
+            
+            $(document.body).css("--primary-color", primaryColor);
+        });
     </script>
 
 
